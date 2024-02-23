@@ -2,6 +2,7 @@ package com.app.controllers.dto;
 
 import com.app.advice.validation.anotation.ValidName;
 import com.app.advice.validation.anotation.ValidPhoneNumber;
+import com.fasterxml.jackson.annotation.JsonProperty;
 import jakarta.validation.Valid;
 import jakarta.validation.constraints.*;
 import lombok.AllArgsConstructor;
@@ -17,6 +18,7 @@ import java.time.LocalDate;
 @Builder
 public class EmployeeDTO {
 
+    @JsonProperty(access = JsonProperty.Access.READ_ONLY)
     private Long id;
     
     @ValidName

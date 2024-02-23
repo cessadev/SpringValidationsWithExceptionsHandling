@@ -137,7 +137,6 @@ public class EmployeeController {
             } else {
                 Department department = departments.get(0);
                 employeeService.save(Employee.builder()
-                        .id(employeeDTO.getId())
                         .name(employeeDTO.getName())
                         .lastName(employeeDTO.getLastName())
                         .email(employeeDTO.getEmail())
